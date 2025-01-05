@@ -21,10 +21,19 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
     cors({
-        origin:"https://khushifragranceskf.netlify.app/",
-        credentials:true,
+        origin: function (origin, callback) {
+            const allowedOrigins = [
+                "https://khushifragranceskf.netlify.app/"
+            ];
+            if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+                callback(null, true);
+            } else {
+                callback(new Error('Not allowed by CORS'));
+            }
+        },
+        credentials: true,
     })
-)
+);
 app.use(
     fileUpload({
         useTempFiles:true,
