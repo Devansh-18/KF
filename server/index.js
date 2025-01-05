@@ -23,7 +23,7 @@ app.use(
     cors({
         origin: function (origin, callback) {
             const allowedOrigins = [
-                "https://khushifragranceskf.netlify.app/"
+                "https://khushifragranceskf.netlify.app"
             ];
             if (!origin || allowedOrigins.indexOf(origin) !== -1) {
                 callback(null, true);
