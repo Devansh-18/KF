@@ -17,7 +17,7 @@ exports.contactUsController = async (req, res) => {
             contactUsEmail(email, firstname, lastname, message, phoneNo, state, subject)
         )
         const emailResforTeam = await mailSender(
-            "trialevent965@gmail.com",
+            "devanshdubey54321@gmail.com",
             "New Query ",
             queryNotify(email, firstname, lastname, message, phoneNo, state, subject)
         )
