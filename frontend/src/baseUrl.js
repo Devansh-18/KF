@@ -1,1 +1,1 @@
-export const REACT_APP_BASE_URL = "https://kf-backend-bnzc.onrender.com"
+export const REACT_APP_BASE_URL = "https://kf-backend-bnzc.onrender.com/api/v1"
